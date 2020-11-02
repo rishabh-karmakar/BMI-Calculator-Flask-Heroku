@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    color: purple;
+}
+
+body{
+    /* margin-top: 1000px; */
+    /* border:10px solid blue;  */
+    padding: 50px; 
+    padding-top: 150px;
+    display: grid;
+    background-color: rgb(118, 40, 170);
+}
+form{
+    margin:auto;
+}
+.main{
+    border:10px solid blue;
+    background-color: white;
+    padding: 50px;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    text-align: justify;
+    display: grid;
+    place-items: center;
+}
+
+.status{
+    /* display: grid;
+    place-items: center; */
+    
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    /* font-weight: bold; */
+    font-family: Arial, sans-serif;
+}

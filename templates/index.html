@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css?u={{ last_updated }}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      .button-success {
+        color: white;
+        border-radius: 4px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        background: rgb(26, 192, 64);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1 id="h">Calculate your BMI for Free!!!</h1>
+      <form class="pure-form pure-form-aligned" method="POST" action="/">
+        <fieldset>
+          <label for="username">Please Enter Your Name: </label>
+          <!-- Please Enter Your Name: &ensp;&ensp; -->
+          <input
+            type="text"
+            name="username"
+            required
+            placeholder="Name"
+            value=""
+          /><br />
+          <label for="weight">Enter Your Weight in kgs: </label>
+
+          <!-- Enter Your Weight in kgs: &ensp;&ensp; -->
+          <input type="number" name="weight" required placeholder="Weight" />
+          <select type="multiple" name="weightunits">
+            <option value="kg" selected="selected">kilograms</option>
+            <option value="lb">pounds</option></select
+          ><br />
+          <label for="height">Enter Your Height in cms: </label>
+          <!-- Enter Your Height in cms: &ensp;&ensp; -->
+          <input
+            type="number"
+            name="height"
+            required
+            placeholder="Height"
+          /><select type="multiple" name="heightunits">
+            <option value="centimetres" selected="selected">centimetres</option>
+            <option value="inches">inches</option></select
+          ><br />
+        </fieldset>
+        <br />
+        <button type="submit" class="pure-button button-success" value="Submit">
+          Calculate
+        </button>
+      </form>
+
+      <br />
+      <div class="status">
+        {% if name %} Hello! {{ name }}, your BMI is {{ bmi }}<br />
+        Youre
+        <span class="state" id="st" style="font-weight: bold">{{state}}</span>
+        {% endif %}
+      </div>
+    </div>
+    <script src="/static/js/script.js?u={{last_updated}}"></script>
+  </body>
+</html>
